@@ -7,9 +7,9 @@ import json
 import time
 import os
 import hashlib
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
+#from requests.packages.urllib3.exceptions import InsecureRequestWarning
 # 禁用安全请求警告
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+#requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
  
 # 配置各种key
 # 机器人的 webhook，支持钉钉、server酱等服务
