@@ -116,8 +116,8 @@ def warning_sh():
         if not ybjs['warning']:
             print("无灾害预警")
         else:
-            if '黄色' == yb[0]['level'] or '橙色' == yb[0]['level'] or '红色' == yb[0]['level']:
-                d1 = yb[0]['text']
+            if '蓝色' == yb[0]['level'] or '黄色' == yb[0]['level'] or '橙色' == yb[0]['level'] or '红色' == yb[0]['level']:
+                d1 = '————————————\n' + yb[0]['text']
                 output(d1)
             else:
                 print("灾害预警等级较低")
@@ -150,6 +150,7 @@ def check_if_is_work_day():
     return False
 
 def main():
+    print("--------------------------------------------------")
     check_if_is_work_day()
  
 def main_handler(event, context):
