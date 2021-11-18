@@ -134,7 +134,10 @@ def check_if_is_work_day():
     info_txt = rep.content.decode()
     holiday_info = json.loads(info_txt)
     global datetype
-    if 0 == holiday_info['info']:
+    if 0 != holiday_info['info']:
+        datetype = 3
+        print('判断为非工作日')
+    else:
         datetype = 2
         sign_sh()
         sign_gx()
@@ -143,9 +146,6 @@ def check_if_is_work_day():
             KIM()
         except Exception:
             print('[+]请检查KIM配置是否正确')
-    else:
-        datetype = 2
-        print(datetype)
 
     return False
 
